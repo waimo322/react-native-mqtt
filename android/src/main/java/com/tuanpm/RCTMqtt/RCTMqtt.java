@@ -359,7 +359,7 @@ public class RCTMqtt implements MqttCallback{
 
     WritableMap params = Arguments.createMap();
    	params.putString("event", "message");
-   	params.putMap("message", data);
+   	params.putString("message", data.toString());
     sendEvent(_reactContext, "mqtt_events", params);
   }
 
